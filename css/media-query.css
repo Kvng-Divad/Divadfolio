@@ -38,6 +38,13 @@
         width: 75%;
         margin: auto;
     }
+    .skills-content{
+        width: 85%;
+        margin:0 auto;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 1rem;
+        gap: 1rem;
+    }
 }
 
 @media (min-width: 960px){
@@ -52,10 +59,6 @@
     }
     .hero-icons{
         width: 25rem;
-    }
-    
-    .social-links{
-        margin: 3rem 0;
     }
     .about-content{
         padding: 3rem 2rem 2rem 4rem;
