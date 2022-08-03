@@ -64,7 +64,6 @@
      box-sizing: border-box;
      font-size: 14px;
      outline: none;
-     overflow-x: hidden;
  }
  ::before, ::after
  {
@@ -72,7 +71,7 @@
  }
 html{
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    
 }
 
 ul{
@@ -348,7 +347,7 @@ input,button{
 
 .about-container{
     margin-top: 4rem;
-    padding: 0 1rem 0 1.5rem;
+    padding: 0 1rem;
     justify-content: center;
 }
 .about-content{
@@ -358,6 +357,8 @@ input,button{
 }
 .about-info{
     display: grid;
+    width: 90%;
+    margin: auto;
     gap: 1.5rem;
     justify-content: center;
 }
@@ -368,12 +369,12 @@ input,button{
 }
 .content-img{
     width: 90%;
-    max-width: 400px;
+    max-width: 500px;
     border-radius: 15px;
 }
 .about-card{
     gap: .5rem;
-    grid-template-columns: repeat(3, max-content);
+    grid-template-columns: repeat(3, 1fr);
 }
 .card{
     background: var(--skin-color);
