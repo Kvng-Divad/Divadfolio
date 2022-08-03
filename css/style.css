@@ -331,13 +331,14 @@ input,button{
 .scroll-container{
     position: relative;
     left: 90%;
-    margin-top: -10rem;
+    margin-top: -9.5rem;
 }
 .scroll-img{
     width: 1.75rem;
 }
 
 .social-links{
+    margin-top: -1rem;
     width: 100%;
     gap: 1rem;
     justify-content: center;
