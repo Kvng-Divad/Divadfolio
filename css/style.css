@@ -44,7 +44,6 @@
      color: var(--white-color);
      transition: all .3s ease;
      text-transform: capitalize;
-     overflow-x:hidden;
  }
  body.dark{
     --bg-color-900:rgb(12, 12, 12);
@@ -72,7 +71,7 @@
  }
 html{
     scroll-behavior: smooth;
-    
+    overflow-x: hidden;
 }
 
 ul{
