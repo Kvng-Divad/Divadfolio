@@ -64,6 +64,7 @@
      box-sizing: border-box;
      font-size: 14px;
      outline: none;
+     overflow-x: hidden;
  }
  ::before, ::after
  {
@@ -358,6 +359,7 @@ input,button{
 .about-info{
     display: grid;
     gap: 1.5rem;
+    justify-content: center;
 }
 .content-image{
     width: 100%;

@@ -8,14 +8,7 @@
     .hero-icons{
         margin-top: 1.35rem;
     }
-    .about-content{
-        padding: 3rem 2rem 2rem 4rem;
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-    }
-    .about-card{
-        gap: .25rem;
-    }
+   
 }
 
 
@@ -40,7 +33,14 @@
         gap: 2rem;
     }
     
-    
+    .about-content{
+        padding: 3rem 2rem 2rem 4rem;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    .about-card{
+        gap: .25rem;
+    }
 }
 
 @media (min-width: 960px){
