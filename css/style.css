@@ -331,6 +331,7 @@ input,button{
 .scroll-container{
     position: relative;
     left: 90%;
+    margin-top: -10rem;
 }
 .scroll-img{
     width: 1.75rem;
