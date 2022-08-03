@@ -44,6 +44,7 @@
      color: var(--white-color);
      transition: all .3s ease;
      text-transform: capitalize;
+     
  }
  body.dark{
     --bg-color-900:rgb(12, 12, 12);
@@ -72,6 +73,7 @@
  }
 html{
     scroll-behavior: smooth;
+   
 }
 
 ul{
