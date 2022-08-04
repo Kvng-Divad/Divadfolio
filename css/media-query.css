@@ -74,4 +74,17 @@
         width: 100%;
         margin: auto;
     }
+    .sevices-content{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .services-image{
+        width: 80%;
+    }
+    .services-img{
+        margin-left: 4rem;
+    }
+    .services-accordion{
+        gap: 1.25rem;
+        width: 82%;
+    }
 }
