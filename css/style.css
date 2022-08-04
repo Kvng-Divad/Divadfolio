@@ -346,14 +346,13 @@ input,button{
 .scroll-container{
     position: relative;
     left: 93%;
-    margin-top: -7.5rem;
+    margin-top: -9.5rem;
 }
 .scroll-img{
     width: 1.75rem;
 }
 
 .social-links{
-    margin-top: -1rem;
     width: 100%;
     gap: 1rem;
     justify-content: center;
@@ -464,7 +463,7 @@ input,button{
     color: var(--skin-color2);
 }
 .services-container{
-    margin-top: 3rem;
+    margin-top: 4rem;
     padding: 0 .5rem;
 }
 .sevices-content{
@@ -563,8 +562,58 @@ input,button{
 .works-container{
     margin-top: 5rem;
 }
-
-
+.works-content{
+    display: grid;
+    padding: 1rem;
+    width: 97%;
+    margin: auto;
+}
+.works-nav{
+    display: flex;
+    justify-content: space-evenly;
+    padding: .5rem;
+    gap: .25rem;
+}
+.works-link{
+    padding: .5rem;
+    border-radius: .5rem;
+    font-family: var(--bdy-font-family-alt3);
+}
+.works-link:hover{
+    background:var(--skin-color);
+  }
+.works-link.active{
+  background:var(--skin-color2);
+}
+.work-cards{
+    margin-top: 3rem;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+}
+.work-card{
+    padding: 1rem;
+    border-radius: .5rem;
+    background: var(--body-color);
+}
+.card-image{
+    width: 100%;
+    border-radius: .5rem;
+}
+.card-description{
+    font-size: var(--font-size-sm);
+}
+.card-links{
+    display: flex;
+    justify-content: space-between;
+}
+.card-link{
+    margin: 1rem 0;
+    padding: .5rem;
+    color: var(--white-color);
+    background: var(--skin-color);
+    border-radius: .5rem;
+    font-family: var(--bdy-font-family-alt3);
+}
 
 
 /*-----Works----*/
