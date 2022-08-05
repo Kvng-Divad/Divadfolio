@@ -8,7 +8,21 @@
     .hero-icons{
         margin-top: 1.35rem;
     }
-   
+    .skills-content{
+        width: 90%;
+    }
+    .works-nav{
+        justify-content: space-evenly;
+    }
+    .work-cards{
+        margin-top: 3rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    .services-accordion{
+        gap: 1.25rem;
+        width: 90%;
+    }
 }
 
 
@@ -45,6 +59,7 @@
         padding: 1rem;
         gap: 1rem;
     }
+   
 }
 
 @media (min-width: 960px){
@@ -76,6 +91,7 @@
     }
     .sevices-content{
         grid-template-columns: repeat(2, 1fr);
+        width: 94%;
     }
     .services-image{
         width: 80%;
@@ -84,11 +100,10 @@
         margin-left: 4rem;
     }
     .services-accordion{
-        gap: 1.25rem;
-        width: 82%;
+        width: 83%;
     }
     .works-content{
-        width: 82%;
+        width: 83%;
         margin: auto;
     }
     .work-cards{
@@ -96,4 +111,12 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
     }
+    .review-slider{
+        width: 75%;
+        margin: 3rem auto;
+    }
+    .contact-content{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+     }
 }
