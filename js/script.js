@@ -61,12 +61,12 @@ var swiperReview = new Swiper (".review-slider", {
 
 
 
-/*--------Dark/ Light Theme-------
-let dayNight = document.querySelector("#theme-button");
+/*--------Dark/ Light Theme-------*/
+let dayNight = document.querySelector(".theme");
 dayNight.addEventListener('click', () => {
     dayNight.classList.toggle('fa-sun')
     dayNight.classList.toggle('fa-moon')
-    document.body.classList.toggle('dark');
+    document.body.classList.toggle('light');
 });
 
 
