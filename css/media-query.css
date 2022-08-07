@@ -102,6 +102,11 @@
     .services-accordion{
         width: 83%;
     }
+    .scroll-container{
+        position: relative;
+        left: 96%;
+        margin-top: -9.5rem;
+    }
     .works-content{
         width: 83%;
         margin: auto;
@@ -118,5 +123,7 @@
     .contact-content{
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
+        width: 83%;
+        margin: auto;
      }
 }

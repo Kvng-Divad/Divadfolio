@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Kanit:wght@400;500;600;700;800;900&family=Lobster&family=Merriweather:wght@400;700;900&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 :root{
     --bg-color-1:linear-gradient(to bottom, #010c24,#021953);
     --bg-color-2:linear-gradient(to right, #020b20,#021953);
@@ -9,6 +10,7 @@
     --white-color:#fff;
     --white-color-2:rgba(184, 182, 203, 0.75);
     --black-color:rgb(10, 3, 71);
+    --black-color-2:#000;
     --white-color3: #d9d9d9;
     --skin-color4:rgb(255, 132, 0);
     --box-shadow:0 .25rem .75rem rgba(0, 0, 0, 0.448);
@@ -19,9 +21,12 @@
 
     --bdy-font-family: 'Poppins', sans-serif ;
     --bdy-font-family-alt: 'Kanit', sans-serif;
-    --bdy-font-family-alt2: 'Merriweather', serif;
-    --bdy-font-family-alt3:  'Lobster', cursive;
-    --bdy-font-family-alt4: 'Clicker Script', cursive;
+    --bdy-font-family-alt4: 'Merriweather', serif;
+    --bdy-font-family-alt2: 'Space Grotesk', sans-serif;
+    --bdy-font-family-alt3: 'nunito', sans-serif;
+    --bdy-font-family-alt5: 'lobster', cursive;
+
+    
     
     --font-size-bggr:3rem;
     --font-size-bg: 2.25rem;
@@ -145,8 +150,8 @@ input,button{
     font-weight: 500;
     text-align: center;
     border-radius: .75rem;
-    text-transform: uppercase;
-    font-family: var(--bdy-font-family-alt3);
+    text-transform: capitalize;
+    font-family: var(--bdy-font-family-alt2);
 }
 .btn:hover{
     background: var(--white-color);
@@ -197,7 +202,7 @@ input,button{
     justify-content: space-between;
     align-items: center;
     padding: 2rem 1rem 1rem;
-    font-family: var(--bdy-font-family-alt3);
+    font-family: var(--bdy-font-family-alt2);
     z-index: 10;
     overflow-x: hidden;
 }
@@ -218,8 +223,8 @@ input,button{
     overflow-x: hidden;
 }
 .nav{
-    width: 90%;
-    padding: 1rem 1rem;
+    width: 85%;
+    padding: 1rem .75rem;
     background: var(--bg-color-2);
     border-radius: 25px;
     align-items: center;
@@ -230,6 +235,22 @@ input,button{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+.nav-link 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .75rem;
+    border-radius: 50% 15%;
+}
+.nav-link:hover{
+    background: var(--body-color);
+    box-shadow: var(--box-shadow);
+}
+.nav-link.active{
+    background: var(--skin-color);
+    box-shadow: var(--box-shadow);
 }
 .nav-link i{
     font-size: var(--font-size-nr);
@@ -252,7 +273,7 @@ input,button{
 }
 .home-title h1{
     font-size: var(--h1-size);
-    font-family: var(--bdy-font-family-alt3);
+    font-family: var(--bdy-font-family-alt2);
     font-weight: var(--font-medium);
     text-transform: uppercase;
 }
@@ -260,7 +281,7 @@ input,button{
     font-size: var(--h2-size); 
     text-transform: uppercase;
     font-weight: var(--font-bold);
-    font-family: var(--bdy-font-family-alt2);
+    font-family: var(--bdy-font-family-alt4);
 }
 .home-title h3{
     font-size: var(--h3-size); 
@@ -345,8 +366,8 @@ input,button{
 }
 .scroll-container{
     position: relative;
-    left: 93%;
-    margin-top: -9.5rem;
+    left: 92%;
+    margin-top: -7.5rem;
 }
 .scroll-img{
     width: 1.75rem;
@@ -413,9 +434,11 @@ input,button{
     font-size: var(--font-size-sm);
     margin: .5rem 0;
     text-transform: uppercase;
+    
 }
 .card p{
     font-size: var(--font-size-smlr);
+    font-family: var(--bdy-font-family-alt);
 }
 
 
@@ -580,7 +603,7 @@ input,button{
 .works-link{
     padding: .5rem;
     border-radius: .5rem;
-    font-family: var(--bdy-font-family-alt3);
+    font-family: var(--bdy-font-family-alt5);
 }
 .works-link:hover{
     background:var(--skin-color);
@@ -641,7 +664,7 @@ input,button{
     color: var(--white-color);
     background: var(--skin-color);
     border-radius: .5rem;
-    font-family: var(--bdy-font-family-alt3);
+    font-family: var(--bdy-font-family-alt5);
     box-shadow: var(--box-shadow);
 }
 .card-link:hover{
@@ -735,6 +758,60 @@ input,button{
     grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
  }
+ .contact-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+ }
+.contact-orb{
+    position: relative;
+    align-items: center;
+    max-width: 100%;
+    height: 100%;
+    min-height: 500px;
+}
+.icon{
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    color: var(--color);
+    position: absolute;
+}
+.center{
+    left: 40%;
+    width: 90px;
+    height: 90px;
+    font-size: var(--font-size-bg);
+    border: 2px solid var(--black-color);
+    text-shadow: none;
+    box-shadow: inset -2px -2px 5px var(--white-color3), inset 3px 3px 7px var(--white-color), inset 1px 2px 1px var(--black-color-2), inset 1px 2px 1px var(--black-color-2);
+    transition: box-shadow .3s;
+    z-index: 9;
+    margin: auto;
+    background: var(--white-color-2);
+}
+.social{
+    left: 40%;
+    background: var(--white-color-2);
+    transform-origin: 220%;
+}
+.social .fa{
+    transform: rotate(calc(360deg / -6 * var(--i)));
+    display: grid;
+    place-content: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: inherit;
+    border: 2px solid var(--black-color-2);
+}
+.center:focus ~ .social{
+    transform: rotate(calc(360deg / 6 * var(--i)));
+    left: 15%;
+}
+
+
  .form{
     width: 85%;
     border-radius: .5rem;
@@ -743,6 +820,7 @@ input,button{
     padding: .85rem;
     margin: 0 auto;
 }
+
 .inputBox{
     display: flex;
     flex-direction: column;
@@ -764,6 +842,7 @@ input,button{
     border-radius: .5rem;
     padding: .75rem;
     font-size: var(--font-size-nr);
+    font-family: var(--bdy-font-family-alt2);
     color:var(--white-color);
     text-transform: none;
     margin-bottom: .75rem;
