@@ -12,6 +12,7 @@
     --black-color:rgb(10, 3, 71);
     --black-color-2:#000;
     --white-color3: #d9d9d9;
+    --circle-color: #fff;
     --skin-color4:rgb(255, 132, 0);
     --box-shadow:0 .25rem .75rem rgba(0, 0, 0, 0.448);
 
@@ -260,6 +261,13 @@ input,button{
     color: var(--white-color);
 }
 
+/*change background header*/
+
+.scroll-header{
+    background-color: var(--body-color);
+    box-shadow: 0 1px 4px hsla(228, 4%, 15% , .1);
+}
+
 /*-----nav----*/
 
 /*-----Home----*/
@@ -293,86 +301,107 @@ input,button{
     color: var(--white-color-2);
     font-family: var(--bdy-font-family-alt2);
 }
-.hero-images{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
-.hero-img-cont{
+
+.hero{
+    position: inherit;
     width: 100%;
-    height: 350px;
+    height: 300px;
     justify-content: center;
     align-items: center;
-    
+    border-radius: 50%;
+}
+.hero-images{
+    position: absolute;
+    align-items: center;
+    justify-content: center;
 }
 .hero-img{
+    background: url(/images/hero.png);
     width: 12.5rem;
+    height: 13rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 8.5px;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
-    box-shadow: var(--box-shadow); 
+    box-shadow: var(--box-shadow);
+    padding: .5rem;
+    background-color: var(--body-color);
+    z-index: 9;
+    position: inherit;
 }
-.hero-images:hover .hero-icon{
-    display: block;
-}
-.hero-images:hover .hero-icons{
-    animation: rotate 5s ease;
+.hero-icons.active {
+    animation: rotate 5s  linear infinite;
 }
 @keyframes rotate{
-   from{
+    from{
     transform: rotate(0deg)
-   }
-   to{
+    }
+    to{
     transform: rotate(360deg)
    }
 }
 
 .hero-icons{
-    width: 20rem;
-    position: absolute;
-    margin-top: 2rem;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.circle{
+    display: flex;
     justify-content: center;
     align-items: center;
-    overflow-x: hidden;
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    box-shadow: var(--box-shadow);
+    border-radius: 50%;
+    z-index: 1;
 }
-.hero-icon{
-    width: 25px;
-    position: relative;
-    display: none;
+.circle>img{
+    width: 2rem;
+    height: 2rem;
 }
-.hero-icon.icon2{
-    margin-top: 1.35rem;
-    margin-left: 12rem;
+.circle.active:nth-child(1){
+    transform: translate(-40%, 230%);
+    transition: .3s;
 }
-.hero-icon.icon3{
-    margin-top:3.5rem;
-    margin-left: 16rem;
+.circle.active:nth-child(2){
+    transform: translate(140%, 150%);
+    transition: .4s;
 }
-.hero-icon.icon4{
-    margin-top: -2.25rem;
-    margin-right: 16rem;
+.circle.active:nth-child(3){
+    transform: translate(220%, -30%);
+    transition: .5s;
 }
-.hero-icon.icon5{
-    margin-top:-7.65rem;
-    margin-right: 12rem;
+.circle.active:nth-child(4){
+    transform: translate(160%, -220%);
+    transition: .6s;
 }
-.hero-icon.icon6{
-    margin-top:10rem;
-    margin-left:12rem;
+.circle.active:nth-child(5){
+    transform: translate(-40%, -330%);
+    transition: .7s;
 }
-.hero-icon.icon7{
-    margin-top:-1.5rem;
-    margin-right:12rem;
+.circle.active:nth-child(6){
+    transform: translate(-255%, -225%);
+    transition: .8s;
 }
-.hero-icon.icon8{
-    margin-top:1.5rem;
-    margin-left:.5rem;
+.circle.active:nth-child(7){
+    transform: translate(-320%,-35%);
+    transition: .9s;
+}
+
+.circle.active:nth-child(8){
+    transform: translate(-245%, 145%);
+    transition: 1s;
 }
 .scroll-container{
     position: relative;
     left: 92%;
-    margin-top: -7.5rem;
+    margin-top: -8.5rem;
 }
-
 .scroll-img{
     width: 1.75rem;
 }
@@ -700,6 +729,7 @@ input,button{
 /*----review---*/
 .testimonial{
     margin-top: 5rem;
+    min-height: 100%;
 }
 .review-slider{
     width: 90%;
@@ -770,8 +800,8 @@ input,button{
 
 
  /*----contact---*/
- .contact-container{
-    margin: 3rem 0;
+.contact-container{
+    margin: 6rem 0 3rem;
  }
  .contact-content{
     margin: 3rem 0;
@@ -779,57 +809,107 @@ input,button{
     gap: 1rem;
  }
  .contact-left{
-    display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 1rem;
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+ }
+ .contact-title{
+    color: var(--white-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: var(--bdy-font-family-alt2);
+    font-size: var(--h3-size);
+ }
+ .contact-logo{
+    position: inherit;
+    width: 100%;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
  }
 .contact-orb{
-    position: relative;
+    position: absolute;
     align-items: center;
-    max-width: 100%;
-    height: 100%;
-    min-height: 500px;
+}
+.contact-button{
+    position: absolute;
+    align-items: center;
 }
 .icon{
     cursor: pointer;
     display: grid;
     place-content: center;
     border-radius: 50%;
-    color: var(--color);
-    position: absolute;
+    color: var(--black-color);
+    background: var(--circle-color);
+    box-shadow: inset -2px -2px 5px rgb(160, 160, 160), inset 3px 3px 7px #ccc, inset 1px 2px 1px #111, inset 1px 2px 1px #000;
 }
 .center{
-    left: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
     width: 90px;
+    margin-left: .25rem;
     height: 90px;
     font-size: var(--font-size-bg);
-    border: 2px solid var(--black-color);
+    border: 2px solid var(--circle-color);
     text-shadow: none;
-    box-shadow: inset -2px -2px 5px var(--white-color3), inset 3px 3px 7px var(--white-color), inset 1px 2px 1px var(--black-color-2), inset 1px 2px 1px var(--black-color-2);
+   
     transition: box-shadow .3s;
     z-index: 9;
-    margin: auto;
-    background: var(--white-color-2);
 }
 .social{
-    left: 40%;
-    background: var(--white-color-2);
-    transform-origin: 220%;
+    position: absolute;
+    opacity: 1;
+    margin-left: 1rem;
 }
 .social .fa{
-    transform: rotate(calc(360deg / -6 * var(--i)));
     display: grid;
     place-content: center;
     width: 4rem;
     height: 4rem;
     border-radius: inherit;
-    border: 2px solid var(--black-color-2);
+    border: 2px solid var(--circle-color);
 }
-.center:focus ~ .social{
-    transform: rotate(calc(360deg / 6 * var(--i)));
-    left: 15%;
+.social.active{
+    margin-left:0;
 }
+.social.active:nth-child(1){
+    transform: translate(140% , 180%);
+    transition: .3s;
+    color: #0549f7;
+}
+.social.active:nth-child(2){
+    transform: translate(210%);
+    transition: .4s;
+    color: #000000;
+}
+.social.active:nth-child(3){
+    transform: translate(-150%);
+    transition: .7s;
+    color: #2d05f7;
+}
+.social.active:nth-child(4){
+    transform: translate(140% , -180%);
+    transition: .5s;
+    color: #f705c3;
+}
+.social.active:nth-child(6){
+    transform: translate(-60% , 180%);
+    transition: 00.8s;
+    color: #14b50b;
+}
+.social.active:nth-child(5){
+    transform: translate(-60% , -180%);
+    transition: .6s;
+    color: #10f74d;
+}
+
 
 
  .form{

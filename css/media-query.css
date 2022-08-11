@@ -2,12 +2,6 @@
     *{
         font-size: 16px;
     }
-    .hero-img{
-        width: 12rem;
-    }
-    .hero-icons{
-        margin-top: 1.35rem;
-    }
     .skills-content{
         width: 90%;
     }
@@ -65,15 +59,6 @@
     .home-container{
         padding: 4rem 1.5rem 3rem;
     }
-    .hero-img-cont{
-        width: 100%;
-        height: 350px;
-        justify-content: center;
-        align-items: center;
-    }
-    .hero-icons{
-        width: 25rem;
-    }
     .about-content{
         padding: 3rem 2rem 2rem 4rem;
         grid-template-columns: 1fr 1fr;
@@ -104,7 +89,7 @@
     .scroll-container{
         position: relative;
         left: 96%;
-        margin-top: -10.5rem;
+        margin-top: -7.5rem;
     }
     .works-content{
         width: 83%;

@@ -1,3 +1,16 @@
+/* scroll-Header 
+function scrollHeader(){
+    const top = document.querySelector(".top")
+    if(this.scrollY >= 50) {
+         top.classList.add("scroll-header");
+    }
+    else{
+        top.classList.remove("scroll-header"); 
+    }
+}
+window.addEventListener("scroll", scrollHeader);
+*/
+
 /*value accordion */
 const accordionItems = document.querySelectorAll('.services-accordion-item');
 
@@ -70,6 +83,79 @@ dayNight.addEventListener('click', () => {
 });
 
 
+
+/*------hero-------*/
+const heroImg = document.querySelector('.hero-img');
+let heroIcon = document.querySelector('.hero-icons');
+let circle = document.querySelectorAll('.circle');
+
+    
+    circle.forEach((item) => {
+
+    heroImg.addEventListener('click', () => {
+    item.classList.add('active'); });
+
+    heroImg.addEventListener('mouseover', () => {
+    item.classList.toggle('active');});
+
+    heroImg.addEventListener('mouseleave', () => {
+    item.classList.remove('active');
+    heroIcon.classList.remove('active');
+    })});
+
+    heroImg.addEventListener('click', () => {
+    heroIcon.classList.toggle('active')});
+
+
+/*------contact-------*/
+const orb = document.getElementById('center');
+let social = document.querySelectorAll('.social')
+   social.forEach((item) => {
+    orb.addEventListener('click', () => {
+    item.classList.toggle('active');
+})});
+
+
+
+
+/*scroll sections active link */
+
+const sections = document.querySelectorAll('section[id]');
+  
+function scrollActive() {
+    const scrollY = window.pageYOffset
+
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight,
+        sectionTop = current.offsetTop - 58,
+        sectionId = current.getAttribute('id')
+
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            document.querySelector('.nav-list a[href*=' + sectionId + ']').classList.add('active');
+        }
+        else {
+            document.querySelector('.nav-list a[href*=' + sectionId + ']').classList.remove('active')
+        }
+    })
+    
+}
+window.addEventListener("scroll", scrollActive)
+
+
+/*scroll-up
+function scrollUp(){
+    const scrollup = document.getElementById('scroll-up');
+
+    if(this.scrollY >= 350) {
+        scrollup.classList.add('show-scroll');
+   }
+   else{
+    scrollup.classList.remove('show-scroll');
+   }
+}
+window.addEventListener("scroll", scrollUp);*/
+
+
 /*--------scroll- Reveal-------
 const sr = ScrollReveal ({
     origin: 'top',
@@ -82,4 +168,4 @@ const sr = ScrollReveal ({
 sr.reveal('.home, .about, .dishes, .menu, .footer-container, .review, .order,.fast-food',)
 sr.reveal('.dishes-box, .box', {interval:50, reset:true})
 sr.reveal('.about-image', {origin: 'right'})
-sr.reveal('.about-content, .order, ', {origin: 'left'})*/
+sr.reveal('.about-content, .order, ', {origin: 'left'})  --*/  
