@@ -105,7 +105,7 @@ let circle = document.querySelectorAll('.circle');
 
     heroImg.addEventListener('click', () => {
     heroIcon.classList.toggle('active')});
-
+    
 
 /*------contact-------*/
 const orb = document.getElementById('center');
@@ -114,6 +114,23 @@ let social = document.querySelectorAll('.social')
     orb.addEventListener('click', () => {
     item.classList.toggle('active');
 })});
+
+/*------work-nav-------*/
+let WorkCard = document.querySelector('.work-card');
+
+let worksLink = document.querySelectorAll('.works-link');
+let NavList = worksLink.length;
+
+    worksLink.forEach((item) => {
+
+        item.addEventListener('click', () => {
+            for(let j=0; j<NavList; j++){
+                worksLink[j].classList.remove("active")
+               }
+                item.classList.add('active')
+            });
+        }); 
+
 
 
 
@@ -155,6 +172,16 @@ function scrollUp(){
 }
 window.addEventListener("scroll", scrollUp);*/
 
+/*loader
+function loader(){
+    document.querySelector('.loader-container').classList.add('fade-out');
+}
+
+function fadeOut(){
+    setInterval(loader, 4000);
+}
+
+window.onload = fadeOut;
 
 /*--------scroll- Reveal-------
 const sr = ScrollReveal ({
