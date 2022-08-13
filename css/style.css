@@ -102,15 +102,14 @@ input,button{
 /*-----scroll-bar------*/
 ::-webkit-scrollbar{
     width:.5rem;
-    border-radius: .5rem;
     background-color:var(--body-color);
 }
 ::-webkit-scrollbar-thumb{
-    background-color:var(--skin-color);
+    background-color:var(--skin-color2);
     border-radius: .5rem;
 }
 ::-webkit-scrollbar-thumb:hover{
-    background-color: var(--skin-color2);
+    background-color: var(--skin-color);
 }
 /*-----*scroll-bar-----*/
 
@@ -316,20 +315,23 @@ input,button{
     justify-content: center;
 }
 .hero-img{
-    background: url(/images/hero.png);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 12.5rem;
     height: 13rem;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 8.5px;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
     box-shadow: var(--box-shadow);
-    padding: .5rem;
     background-color: var(--body-color);
     z-index: 9;
     position: inherit;
+}
+.hero-image{
+    width: 12.5rem;
+    height: 13rem;
+    border-radius: 50%;
 }
 .hero-icons.active {
     animation: rotate 5s  linear infinite;
@@ -816,6 +818,14 @@ input,button{
     grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
  }
+ .contact-right{
+    justify-content: center;
+    align-items: center;
+    padding: 6.75rem 1rem 3rem;
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+ }
  .contact-title{
     color: var(--white-color);
     text-align: center;
@@ -846,27 +856,28 @@ input,button{
     border-radius: 50%;
     color: var(--black-color);
     background: var(--circle-color);
-    box-shadow: inset -2px -2px 5px rgb(160, 160, 160), inset 3px 3px 7px #ccc, inset 1px 2px 1px #111, inset 1px 2px 1px #000;
 }
 .center{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
-    width: 90px;
-    margin-left: .25rem;
+    width: 90px;  
     height: 90px;
-    font-size: var(--font-size-bg);
-    border: 2px solid var(--circle-color);
     text-shadow: none;
-   
-    transition: box-shadow .3s;
+    transition: .3s;
     z-index: 9;
+    box-shadow: var(--box-shadow);
+}
+.center-img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
 }
 .social{
     position: absolute;
     opacity: 1;
     margin-left: 1rem;
+    box-shadow: inset -2px -2px 5px rgb(160, 160, 160), inset 3px 3px 7px #ccc, inset 1px 2px 1px #111, inset 1px 2px 1px #000;
 }
 .social .fa{
     display: grid;
@@ -913,12 +924,12 @@ input,button{
 
 
  .form{
-    width: 85%;
+    width: 95%;
     border-radius: .5rem;
     box-shadow: var(--box-shadow);
     border: .1rem solid rgba(0,0,0,.2);
     padding: .85rem;
-    margin: 0 auto;
+    margin: 2rem auto 0;
     background: var(--bg-color-2);
 }
 
@@ -963,3 +974,11 @@ input,button{
 
 
  /*----contact---*/
+
+
+  /*----footer---*/
+
+  .footer-container{
+    margin: 7rem 0;
+    padding: 0 1rem;
+  }

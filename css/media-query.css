@@ -110,4 +110,10 @@
         width: 83%;
         margin: auto;
      }
+     .center{
+        margin-left: .365rem;
+     }
+     .form{
+        width: 85%;
+}
 }
